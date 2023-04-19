@@ -117,12 +117,7 @@ fn filter_paeth(a: u8, b: u8, c: u8) -> u8 {
     }
 }
 
-pub(crate) fn unfilter(
-    filter: FilterType,
-    tbpp: BytesPerPixel,
-    previous: &[u8],
-    current: &mut [u8],
-) {
+pub fn unfilter(filter: FilterType, tbpp: BytesPerPixel, previous: &[u8], current: &mut [u8]) {
     use self::FilterType::*;
 
     // [2023/01 @okaneco] - Notes on optimizing decoding filters

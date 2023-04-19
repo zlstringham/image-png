@@ -67,7 +67,7 @@ pub mod chunk;
 mod common;
 mod decoder;
 mod encoder;
-mod filter;
+pub mod filter;
 mod srgb;
 pub mod text_metadata;
 mod traits;

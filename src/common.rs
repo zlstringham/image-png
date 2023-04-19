@@ -97,7 +97,7 @@ pub enum BitDepth {
 /// enum.
 #[derive(Debug, Clone, Copy)]
 #[repr(u8)]
-pub(crate) enum BytesPerPixel {
+pub enum BytesPerPixel {
     One = 1,
     Two = 2,
     Three = 3,
@@ -684,7 +684,7 @@ impl Info<'_> {
 }
 
 impl BytesPerPixel {
-    pub(crate) fn into_usize(self) -> usize {
+    pub fn into_usize(self) -> usize {
         self as usize
     }
 }
